@@ -10,7 +10,7 @@ namespace Ex8
     {
         static void Main(string[] args)
         {
-            int[] numbers = {0, 1, 0, 1, 0};
+            int[] numbers = { 0, 1, 0, 1, 0 };
             foreach (int i in numbers)
             {
                 Console.WriteLine(numbers[i]);
@@ -32,57 +32,56 @@ namespace Ex8
             }
 
             // Tehtävä 3
-            int[] userInput = new int[3];
-            int counter = 0;
 
-            for (counter = 0; counter < userInput.Length; counter++)
+
+            int counter = Convert.ToInt32(Console.ReadLine());
+            int[] lukujono = new int[counter];
+
+            for (int i = 0; i < lukujono.Length; i++)
             {
-                string input = Console.ReadLine();
+                int num;
+                num = Convert.ToInt32(Console.ReadLine());
+                lukujono[i] = num;
+                num++;
 
-                if (input == "")
-                    break;
-                else
-                    int.TryParse(input, out userInput[counter]);
             }
 
-            for (int i = 0; i < counter; i++)
+            Console.WriteLine(string.Join("\n", lukujono));
+
+
+            // Tehtävä 4
+            string[] names = new string[10];
+
+            for (int i = 0; i < names.Length; i++)
             {
-                Console.WriteLine(userInput[i]);
+                string name;
+                name = Console.ReadLine();
+                names[i] = name;
+
+
             }
 
+            Console.WriteLine(string.Join(", ", names));
+
+            // Tehtävä 5
+            string[] names2 = new string[10];
+
+            for (int i = 0; i < names2.Length; i++)
+            {
+                string name;
+                name = Console.ReadLine();
+                names2[i] = name;
+
+            }
+            Array.Reverse(names2);
+            Console.WriteLine(string.Join(", ", names2));
             Console.ReadLine();
 
-            //int counter = Convert.ToInt32(Console.ReadLine());
-            //int[] numbers3 = new int[counter];
-            //int count = 0;
 
-
-            //while (count < numbers3.Length)
-            //{
-            //    if (int.TryParse(Console.ReadLine(), out numbers3[count]))
-            //        count++;
-
-            //}
-
-
-
-            //    foreach (int i in numbers3)
-            //    {
-            //        int num;
-
-            //        num = Convert.ToInt32(Console.ReadLine());
-            //    }
-
-            //    for (int i = 0; i < numbers3.Length; i++)
-            //    {
-            //        Console.WriteLine(numbers3);
-            //    }
-
-            //    Console.ReadLine();
-            //}
-
+            // Tehtävä 6
 
         }
+
     }
 }
 
