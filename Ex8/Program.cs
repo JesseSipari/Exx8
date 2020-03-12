@@ -75,10 +75,30 @@ namespace Ex8
             }
             Array.Reverse(names2);
             Console.WriteLine(string.Join(", ", names2));
-            Console.ReadLine();
 
 
             // Tehtävä 6
+            string[] names3 = new string[10];
+            Console.WriteLine("Insert 10 names");
+
+            for (int i = 0; i < names3.Length; i++)
+            {
+                string name;
+                name = Console.ReadLine();
+                names3[i] = name;
+
+            }
+            Console.WriteLine("Insert the number of the name");
+            int userNum = Convert.ToInt32(Console.ReadLine());
+
+            if (userNum >= 0 && userNum <= names3.Length)
+            {
+                Console.WriteLine(names3[userNum - 1]);
+            }
+            else
+            {
+                Console.WriteLine("Invalid index");
+            }
 
         }
 
