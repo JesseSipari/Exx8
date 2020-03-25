@@ -17,19 +17,26 @@ namespace Ex8
             }
 
             // Tehtävä 2
-            int[] numbers2 = new int[5];
+            int[] numbers2 = { 1, 2, 3, 4, 5 };
+            int count = 0;
+            int numb = 0;
 
-
-            foreach (int i in numbers2)
+            while (count < numbers2.Length)
             {
-                numbers2[i]++;
-                Console.WriteLine(numbers2[i]);
+                Console.WriteLine(numbers2[count]);
+                count++;
             }
 
-            for (int i = 1; i <= numbers2.Length; i++)
+            count = 0;
+            while (count < numbers2.Length)
             {
-                Console.WriteLine(i * 2);
+                numbers2[count] = numbers2[count] * 2;
+                
+                Console.WriteLine(numbers2[count]);
+                count++;
+
             }
+
 
             // Tehtävä 3
 
@@ -100,6 +107,33 @@ namespace Ex8
                 Console.WriteLine("Invalid index");
             }
 
+
+            // Tehtävä 7
+            double[] userDoubles = new double[100];
+            for (int i = 0; i < userDoubles.Length; i++)
+            {
+                double currentNum;
+                currentNum = Convert.ToDouble(Console.ReadLine());
+                userDoubles[i] = currentNum;
+                if (currentNum == 0)
+                {
+
+                    break;
+                }
+
+            }
+            double boundaryDouble = Convert.ToDouble(Console.ReadLine());
+            foreach (double d in userDoubles)
+            {
+                if (d >= boundaryDouble)
+                {
+                    Console.WriteLine(d);
+                }
+
+
+            }
+
+            Console.ReadLine();
         }
 
     }
